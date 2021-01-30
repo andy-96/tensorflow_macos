@@ -49,10 +49,10 @@ arch_list_x86_64=( numpy-1.18.5-cp38-cp38-macosx_11_0_x86_64.whl
 		   scipy-1.5.4-cp38-cp38-macosx_11_0_x86_64.whl  
                    tensorflow_addons-0.11.2+mlcompute-cp38-cp38-macosx_11_0_x86_64.whl )
 
-arch_list_arm64=(  numpy-1.18.5-cp38-cp38-macosx_11_0_arm64.whl
-                   grpcio-1.33.2-cp38-cp38-macosx_11_0_arm64.whl       
-                   h5py-2.10.0-cp38-cp38-macosx_11_0_arm64.whl 
-	           tensorflow_addons-0.11.2+mlcompute-cp38-cp38-macosx_11_0_arm64.whl )
+arch_list_arm64=(  numpy-1.18.5-cp38-cp38-macosx_10_16_arm64.whl
+                   grpcio-1.33.2-cp38-cp38-macosx_10_16_arm64.whl       
+                   h5py-2.10.0-cp38-cp38-macosx_10_16_arm64.whl 
+	           tensorflow_addons-0.11.2+mlcompute-cp38-cp38-macosx_10_16_arm64.whl )
 
 
 tensorflow_version=0.1a1
@@ -336,7 +336,7 @@ echo ">> Installing dependencies."
 "$python_bin" -m pip install ipython
 
 # Install the tensorflow wheel itself
-"$python_bin" -m pip install --upgrade --force -t "$VIRTUAL_ENV/lib/python3.8/site-packages/" --no-dependencies "$package_dir"/tensorflow_macos*-cp38-cp38-macosx_11_0_$arch.whl
+"$python_bin" -m pip install --upgrade --force -t "$VIRTUAL_ENV/lib/python3.8/site-packages/" --no-dependencies "$package_dir"/tensorflow_macos*-cp38-cp38-macosx_10_16_$arch.whl
 
 # Finally, upgrade pip to give the developers the correct version.
 "$python_bin" -m pip install --upgrade pip
